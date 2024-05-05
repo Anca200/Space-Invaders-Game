@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BayMax</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+     @media only screen and (min-width:320px) and (max-width:420px){
+         canvas{
+          width: 90%;
+          padding: 50px;
+          position: absolute;
+          bottom: 0;
+         }
+         .keys p{
+          display: none;
+         }
+         .keys img{
+          display: none;
+         }
+         .right{
+          margin-top: 50px;
+          gap: 10px;
+         }
+         .right img{
+         width: 150px;
+
+         }
+     }
+      canvas {
+        filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+        border-radius: 20px;
+        margin-top: 50px;
+      }
+      .right{
+        position: absolute;
+        right: 100px;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .right img{
+        filter: drop-shadow(0 0 0.75rem rgb(175, 29, 29));
+        animation: MoveUpDown 2s linear infinite;
+        margin-top: 50px;
+
+      }
+      h1 {
+        font-family: "Press Start 2P", system-ui;
+       
+      }
+   
+      @keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+}
+      .keys{
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .keys p{
+        font-size: 1.5rem;
+        font-family: "Press Start 2P", system-ui;
+      }
+      .keys img{
+        filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+      }
+      body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        height: 100vh;
+        background-color: black;
+       color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="right">
+    <h1>BayMax</h1>
+    <img src="./images/bay-max.png" width="250px">
+    </div>
+    <div class="keys">
+      <p>Use:</p>
+    <img src="./images/arrow-keys.png" width="200px" >
+    <img src="./images/space-key.png" width="200px" >
+    </div>
+    <canvas id="game"></canvas>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
